@@ -10,21 +10,23 @@ context of the code they steer and is accountable to the people maintaining it.
 
 ## Topic Areas
 
-IronCore has six topic areas.
+IronCore has three topic areas, aligned with the `*-maintainers` teams in
+[teams.yaml](https://github.com/ironcore-dev/community/blob/main/teams.yaml):
 
-| Area | Scope | Repositories |
-| ---- | ----- | ------------ |
-| **IaaS Core** | Core IronCore API, API machinery, orchestration | [ironcore](https://github.com/ironcore-dev/ironcore), [ironcore-in-a-box](https://github.com/ironcore-dev/ironcore-in-a-box), [kubectl-ironcore](https://github.com/ironcore-dev/kubectl-ironcore), [cloud-provider-ironcore](https://github.com/ironcore-dev/cloud-provider-ironcore), [gardener-extension-provider-ironcore](https://github.com/ironcore-dev/gardener-extension-provider-ironcore), [pool-lifecycle-controller](https://github.com/ironcore-dev/pool-lifecycle-controller) |
-| **Compute** | Machine/virtualization providers | [libvirt-provider](https://github.com/ironcore-dev/libvirt-provider), [cloud-hypervisor-provider](https://github.com/ironcore-dev/cloud-hypervisor-provider), [FeOS](https://github.com/ironcore-dev/FeOS), [machine-controller-manager-provider-ironcore](https://github.com/ironcore-dev/machine-controller-manager-provider-ironcore) |
-| **Storage** | Volume and bucket providers, CSI integration | [ceph-provider](https://github.com/ironcore-dev/ceph-provider), [ironcore-csi-driver](https://github.com/ironcore-dev/ironcore-csi-driver) |
-| **Networking** | Virtual networking: dataplane, CNI, peering | [dpservice](https://github.com/ironcore-dev/dpservice), [metalnet](https://github.com/ironcore-dev/metalnet), [metalbond](https://github.com/ironcore-dev/metalbond), [ironcore-net](https://github.com/ironcore-dev/ironcore-net), [ebpf-nat64](https://github.com/ironcore-dev/ebpf-nat64) |
-| **Network Automation** | Physical fabric and switch automation (SONiC) | [sonic-operator](https://github.com/ironcore-dev/sonic-operator) |
-| **Bare Metal Automation** | Bare metal lifecycle: provisioning, boot, maintenance, DHCP, metal platform integration | [metal-operator](https://github.com/ironcore-dev/metal-operator), [boot-operator](https://github.com/ironcore-dev/boot-operator), [metal-maintenance-operator](https://github.com/ironcore-dev/metal-maintenance-operator), [metal-token-rotate](https://github.com/ironcore-dev/metal-token-rotate), [metaldata](https://github.com/ironcore-dev/metaldata), [FeDHCP](https://github.com/ironcore-dev/FeDHCP), [cluster-api-provider-ironcore-metal](https://github.com/ironcore-dev/cluster-api-provider-ironcore-metal), [metal-load-balancer-controller](https://github.com/ironcore-dev/metal-load-balancer-controller), [cloud-provider-metal](https://github.com/ironcore-dev/cloud-provider-metal), [gardener-extension-provider-ironcore-metal](https://github.com/ironcore-dev/gardener-extension-provider-ironcore-metal), [machine-controller-manager-provider-ironcore-metal](https://github.com/ironcore-dev/machine-controller-manager-provider-ironcore-metal) |
+| Area | Maintainers team |
+| ---- | ---------------- |
+| **IaaS** | `iaas-maintainers` |
+| **Metal** | `metal-maintainers` |
+| **Network** | `network-maintainers` |
 
-Cross-cutting repositories ([controller-utils](https://github.com/ironcore-dev/controller-utils), [provider-utils](https://github.com/ironcore-dev/provider-utils), [kbake](https://github.com/ironcore-dev/kbake), [os-images](https://github.com/ironcore-dev/os-images)) are owned jointly. Their maintainers are drawn from the affected areas. [ironcore-image](https://github.com/ironcore-dev/ironcore-image) is owned jointly by the Compute and Bare Metal Automation areas. Governance repositories ([community](https://github.com/ironcore-dev/community), [steering](https://github.com/ironcore-dev/steering), [roadmap](https://github.com/ironcore-dev/roadmap), [enhancements](https://github.com/ironcore-dev/enhancements), [documentation](https://github.com/ironcore-dev/ironcore-dev.github.io)) are owned by the TSC as a whole, where enhancements holds the project-wide enhancement proposals.
+Each maintainers team owns the area's repositories (via code ownership in the
+repositories themselves).
+Governance repositories (community, steering, roadmap, enhancements,
+documentation) are owned by the TSC as a whole.
 
 New repositories are assigned to one topic area at creation. Areas may be
-split, merged or created by a two-thirds vote of the TSC.
+split, merged or created by a two-thirds vote of the TSC, with the
+corresponding change to `teams.yaml`.
 
 ## Roles
 
@@ -35,10 +37,10 @@ One additional role exists:
 
 ### TSC Representative (Area Lead)
 
-Each topic area elects **two TSC representatives**. The representatives of all
-six areas together form the TSC. One person may hold at most one
-representative seat, and the two representatives of an area should come from
-different employers where possible.
+Each topic area elects **two TSC representatives** from its maintainers team.
+The representatives of all three areas together form the TSC. One person may
+hold at most one representative seat, and the two representatives of an area
+should come from different employers where possible.
 
 Responsibilities:
 
@@ -50,7 +52,7 @@ Responsibilities:
 
 Requirements:
 
-- Be an active maintainer of at least one repository in the area
+- Be a member of the area's `*-maintainers` team
 - Sustained contributions to the area over the last 12 months
 
 ### Area Maintainer
@@ -78,7 +80,7 @@ As defined in [Membership](/membership).
 
 ## Elections
 
-- **Size:** 12 voting TSC members, 2 representatives per area.
+- **Size:** 6 voting TSC members, 2 representatives per area.
 - **Term:** 12 months. All seats are up for election at the same time, each
   area electing its two representatives.
 - **Electorate:** anyone with a merged contribution (code, docs, reviews) in
@@ -88,61 +90,48 @@ As defined in [Membership](/membership).
 - **Vote:** public vote using a TSC-approved election tool, simple majority
   of the area's electorate. Election officers are
   appointed by the TSC and may not run in the election they administer.
-- **Chair:** the TSC elects its Chair among the twelve representatives. The
-  Chair keeps their area seat.
+- **Chair:** the TSC Chair is elected by vote of all project maintainers
+  (any member of a `*-maintainers` team is eligible to vote and to run). The
+  Chair must not hold an area representative seat; a sitting representative
+  elected Chair vacates their area seat, triggering a special election in
+  that area.
+- **Stand-in:** if a representative is temporarily unavailable, the area's
+  remaining representative may call a stand-in from the other maintainers in
+  the area's group. The stand-in votes on the area's behalf until the
+  representative returns or a special election concludes.
 - **Vacancy:** a special election is held within 30 days. The remaining
-  representative holds the area's votes in the interim.
+  representative holds the area's votes in the interim (a stand-in may be
+  called as above).
 - **Removal:** a representative may be removed by a two-thirds vote of the
   other representatives, or automatically after 6 months without contributions
   to their area.
 
 ### Initial Round
 
-The initial election for all twelve seats is held within 4 weeks of adopting
+The initial election for all six seats is held within 4 weeks of adopting
 this structure, following the election process above. The sitting TSC remains
 in office until the election concludes and is then dissolved. The elected
-representatives take over all twelve seats.
+representatives take over all six seats.
 
 ## Area Representatives
 
 The representatives currently elected for each topic area.
 
-### IaaS Core
+### IaaS
 
 | Name | GitHub | Employer |
 | ---- | ------ | -------- |
 |           |        |          |
 |           |        |          |
 
-### Compute
+### Metal
 
 | Name | GitHub | Employer |
 | ---- | ------ | -------- |
 |           |        |          |
 |           |        |          |
 
-### Storage
-
-| Name | GitHub | Employer |
-| ---- | ------ | -------- |
-|           |        |          |
-|           |        |          |
-
-### Networking
-
-| Name | GitHub | Employer |
-| ---- | ------ | -------- |
-|           |        |          |
-|           |        |          |
-
-### Network Automation
-
-| Name | GitHub | Employer |
-| ---- | ------ | -------- |
-|           |        |          |
-|           |        |          |
-
-### Bare Metal Automation
+### Network
 
 | Name | GitHub | Employer |
 | ---- | ------ | -------- |
