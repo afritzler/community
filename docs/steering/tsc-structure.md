@@ -90,9 +90,7 @@ As defined in [Membership](/membership).
 - **Vote:** public vote through a TSC-approved election tool, using the single non-transferable vote (SNTV): each voter casts one vote, and the candidates with the most votes win the seats.
 - **Chair:** the TSC Chair is elected by vote of all project maintainers
   (any member of a `*-maintainers` team is eligible to vote and to run). The
-  Chair must not hold an area representative seat; a sitting representative
-  elected Chair vacates their area seat, triggering a special election in
-  that area.
+  Chair must not hold an area representative seat.
 - **Stand-in:** if a representative is temporarily unavailable, the area's
   remaining representative may call a stand-in from the other maintainers in
   the area's group. The stand-in votes on the area's behalf until the
