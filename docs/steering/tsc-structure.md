@@ -84,7 +84,9 @@ As defined in [Membership](/membership).
   area electing its two representatives.
 - **Electorate:** anyone who is a contributor of the area at the time when the vote is started.
 - **Candidacy:** self-nomination or nomination by an area maintainer.
-  Candidates must meet the representative requirements above.
+  Candidates must meet the representative requirements above. Each person
+  may stand as a candidate for at most one position per election cycle:
+  either one area representative seat or the Chair.
 - **Vote:** public vote through a TSC-approved election tool, using the single non-transferable vote (SNTV): each voter casts one vote, and the candidates with the most votes win the seats.
 - **Chair:** the TSC Chair is elected by vote of all project maintainers
   (any member of a `*-maintainers` team is eligible to vote and to run). The
