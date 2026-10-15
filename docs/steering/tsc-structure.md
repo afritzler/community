@@ -83,8 +83,7 @@ As defined in [Membership](/membership).
 - **Size:** 6 voting TSC members, 2 representatives per area.
 - **Term:** 12 months. All seats are up for election at the same time, each
   area electing its two representatives.
-- **Electorate:** anyone with a merged contribution (code, docs, reviews) in
-  the area's repositories during the 12 months before the election.
+- **Electorate:** anyone who is a contributor of the area at the time when the vote is started.
 - **Candidacy:** self-nomination or nomination by an area maintainer.
   Candidates must meet the representative requirements above.
 - **Vote:** public vote using a TSC-approved election tool, simple majority
