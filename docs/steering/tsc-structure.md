@@ -102,7 +102,7 @@ As defined in [Membership](/membership).
   called as above).
 - **Removal:** a representative may be removed by a two-thirds vote of the
   other representatives, or automatically after 6 months without contributions
-  to their area.
+  to their area. This automatically triggers a special election to elect their replacement.
 
 ### Initial Round
 
