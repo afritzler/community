@@ -53,7 +53,6 @@ Responsibilities:
 Requirements:
 
 - Be a member of the area's `*-maintainers` team
-- Sustained contributions to the area over the last 12 months
 
 ### Area Maintainer
 
