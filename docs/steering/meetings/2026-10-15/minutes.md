@@ -31,7 +31,7 @@
 
 - Voting started on the new TSC structure.
 - Discussion: Can the IronCore org be the home network encryption components (Markus Hentsch)
-  - Decision: The IronCore org will be the home for the abstractions and the implementation will be in a 
+  - Decision: The IronCore org will be the home for the abstractions and the implementation will be in a
 separate org. Details will be discussed in the networking working group.
 
 ## Action Items
